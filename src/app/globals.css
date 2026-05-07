@@ -1,18 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --color-brand: #5C1A1B;
-  --color-brand-hover: #7A2526;
-  --color-brand-light: #FCE8E6;
+  --color-pink: #FADADD;
+  --color-pink-dark: #E8A0B2;
   --color-yellow: #F5C518;
   --color-yellow-light: #FFF8DC;
-  --color-cream: #FAF6F0;
-  --color-warm-gray: #F5F0EB;
+  --color-yellow-bg: #FFFCF0;
+  --color-blue: #89CFF0;
+  --color-blue-dark: #5BA3D9;
+  --color-blue-light: #E8F4FD;
+  --color-cream: #FFFDF7;
+  --color-text: #3D2C2E;
+  --color-text-light: #7A6B6D;
+  --color-orange: #E8842A;
 }
 
 @theme inline {
   --color-background: #ffffff;
-  --color-foreground: #171717;
+  --color-foreground: #3D2C2E;
 }
 
 body {
@@ -20,12 +25,10 @@ body {
   color: var(--color-foreground);
 }
 
-/* Smooth scroll */
 html {
   scroll-behavior: smooth;
 }
 
-/* Square card iframe placeholder styling */
 .sq-input {
   border: 1px solid #d6d9dc;
   border-radius: 8px;
@@ -35,11 +38,10 @@ html {
   transition: border-color 0.15s ease;
 }
 .sq-input:focus-within {
-  border-color: #006aff;
-  box-shadow: 0 0 0 2px rgba(0, 106, 255, 0.15);
+  border-color: var(--color-blue-dark);
+  box-shadow: 0 0 0 2px rgba(91, 163, 217, 0.15);
 }
 
-/* Animations */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }

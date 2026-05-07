@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { CheckCircle, MapPin, Clock, ArrowRight } from "lucide-react";
 import Footer from "@/components/Footer";
 import { CartProvider } from "@/lib/cart";
@@ -24,34 +25,34 @@ function ConfirmationContent() {
 
             <h1
               className="text-3xl md:text-4xl font-bold mb-3"
-              style={{ fontFamily: "var(--font-playfair)", color: "var(--color-brand)" }}
+              style={{ fontFamily: "var(--font-playfair)", color: "var(--color-text)" }}
             >
               Order Confirmed!
             </h1>
-            <p className="text-stone-500 mb-2">
+            <p className="text-[#7A6B6D] mb-2">
               Thank you! Your drinks are being prepared.
             </p>
-            <p className="text-sm font-mono text-stone-400 mb-8">
+            <p className="text-sm font-mono text-[#7A6B6D]/60 mb-8">
               Order #{orderNumber}
             </p>
 
-            <div className="bg-white rounded-2xl border border-stone-100 shadow-sm p-6 mb-6 text-left space-y-4">
+            <div className="bg-white rounded-2xl border border-pink-100 shadow-sm p-6 mb-6 text-left space-y-4">
               <div className="flex items-start gap-3">
-                <div className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0" style={{ backgroundColor: "var(--color-brand-light)" }}>
-                  <MapPin className="w-4 h-4" style={{ color: "var(--color-brand)" }} />
+                <div className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0" style={{ backgroundColor: "var(--color-blue-light)" }}>
+                  <MapPin className="w-4 h-4" style={{ color: "var(--color-blue-dark)" }} />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-stone-800">Pickup Location</p>
-                  <p className="text-sm text-stone-500">903 Ragland Street, Mission, TX 78572</p>
+                  <p className="text-sm font-semibold text-[#3D2C2E]">Pickup Location</p>
+                  <p className="text-sm text-[#7A6B6D]">903 Ragland Street, Mission, TX 78572</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0" style={{ backgroundColor: "var(--color-brand-light)" }}>
-                  <Clock className="w-4 h-4" style={{ color: "var(--color-brand)" }} />
+                <div className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0" style={{ backgroundColor: "var(--color-blue-light)" }}>
+                  <Clock className="w-4 h-4" style={{ color: "var(--color-blue-dark)" }} />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-stone-800">Estimated Ready</p>
-                  <p className="text-sm text-stone-500">10 - 15 minutes</p>
+                  <p className="text-sm font-semibold text-[#3D2C2E]">Estimated Ready</p>
+                  <p className="text-sm text-[#7A6B6D]">10 - 15 minutes</p>
                 </div>
               </div>
             </div>
@@ -63,15 +64,15 @@ function ConfirmationContent() {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 href="/order"
-                className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full font-semibold text-sm border-2 transition-all hover:bg-[#FCE8E6] active:scale-95"
-                style={{ borderColor: "var(--color-brand)", color: "var(--color-brand)" }}
+                className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full font-semibold text-sm border-2 transition-all active:scale-95"
+                style={{ borderColor: "var(--color-blue)", color: "var(--color-blue-dark)" }}
               >
                 Order More
               </Link>
               <Link
                 href="/"
                 className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full font-semibold text-sm text-white transition-all hover:opacity-90 active:scale-95"
-                style={{ backgroundColor: "var(--color-brand)" }}
+                style={{ backgroundColor: "var(--color-orange)" }}
               >
                 Back to Home
                 <ArrowRight className="w-4 h-4" />
